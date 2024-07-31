@@ -127,18 +127,20 @@ export default function Home() {
       <h1 className="text-3xl text-gray-950 "> user find application</h1>
       <div className="flex flex-col gap-5 mt-6">
         <Input handleChange={handleChange} />
-        <button
-          className="border border-orange-500 rounded w-40 "
-          onClick={handleClick}
-        >
-          clear
-        </button>
-        <button
-          className="border border-orange-500 rounded w-40"
-          onClick={handleClick}
-        >
-          view
-        </button>
+        <div className="flex gap-3">
+          <button
+            className="border border-orange-500 rounded w-40"
+            onClick={handleClick}
+          >
+            clear
+          </button>
+          <button
+            className="border border-orange-500 rounded w-40"
+            onClick={handleClick}
+          >
+            view
+          </button>
+        </div>
 
         {/* <p> Search value: {searchValue}</p> */}
         {users?.map((user) => {
