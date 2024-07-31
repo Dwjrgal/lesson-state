@@ -138,7 +138,7 @@ export default function Home() {
             clear
           </button>
           <button
-            className="border border-orange-500 rounded w-40"
+            className="border border-indigo-500 rounded w-40"
             onClick={showClick}
           >
             view
