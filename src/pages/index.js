@@ -1,6 +1,7 @@
 import UserCard from "@/components/user-card";
 import Input from "@/components/input";
 import { useState } from "react";
+import { IoClose } from "react-icons/io5";
 
 const profiles = [
   {
@@ -12,6 +13,7 @@ const profiles = [
     phone: "99011090",
     jobTitle: "Software Engineer",
     imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+    icon: <IoClose />,
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const profiles = [
     phone: "99011091",
     jobTitle: "Project Manager",
     imageUrl: "https://randomuser.me/api/portraits/women/2.jpg",
+    icon: <IoClose />,
   },
   {
     id: 3,
@@ -148,7 +151,11 @@ export default function Home() {
         {/* <p> Search value: {searchValue}</p> */}
         {users?.map((user) => {
           return (
-            <UserCard userImg={user.imageUrl} firstName={user.firstName} />
+            <UserCard
+              userImg={user.imageUrl}
+              firstName={user.firstName}
+              CloseIcon={user.icon}
+            />
           );
         })}
         {!profiles && <p>Empty</p>}
