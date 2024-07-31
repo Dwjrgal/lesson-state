@@ -121,6 +121,9 @@ export default function Home() {
   const handleClick = () => {
     setUsers([]);
   };
+  const showClick = () => {
+    setUsers(profiles);
+  };
 
   return (
     <main className="flex flex-col items-center py-8">
@@ -136,7 +139,7 @@ export default function Home() {
           </button>
           <button
             className="border border-orange-500 rounded w-40"
-            onClick={handleClick}
+            onClick={showClick}
           >
             view
           </button>
