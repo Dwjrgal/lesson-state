@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Input = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -6,6 +6,10 @@ const Input = () => {
   const handleChange = (e) => {
     console.log(e.target.value);
     setSearchValue(e.target.value);
+  };
+
+  const handleClick = (e) => {
+    console.log("clicked");
   };
 
   return (
