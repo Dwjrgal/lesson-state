@@ -35,6 +35,7 @@ const profiles = [
     phone: "99011092",
     jobTitle: "UX Designer",
     imageUrl: "https://randomuser.me/api/portraits/women/3.jpg",
+    icon: <IoClose />,
   },
   {
     id: 4,
@@ -45,6 +46,7 @@ const profiles = [
     phone: "99011093",
     jobTitle: "Product Owner",
     imageUrl: "https://randomuser.me/api/portraits/men/4.jpg",
+    icon: <IoClose />,
   },
   {
     id: 5,
@@ -55,6 +57,7 @@ const profiles = [
     phone: "99011094",
     jobTitle: "Marketing Specialist",
     imageUrl: "https://randomuser.me/api/portraits/men/5.jpg",
+    icon: <IoClose />,
   },
 ];
 
@@ -128,6 +131,10 @@ export default function Home() {
     setUsers(profiles);
   };
 
+  const removeCard = (userIndex) =>{
+    const card = profiles.splice(userIndex,1)
+    setUsers(card=[])
+  }
   return (
     <main className="flex flex-col items-center py-8">
       <h1 className="text-3xl text-gray-950 "> user find application</h1>
@@ -146,6 +153,7 @@ export default function Home() {
           >
             view
           </button>
+          <button onClick={removeCard}>{CloseIcon}</button>
         </div>
 
         {/* <p> Search value: {searchValue}</p> */}
