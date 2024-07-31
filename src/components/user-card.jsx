@@ -1,15 +1,10 @@
 import React from "react";
 
-const userCard = ({ userImg, firstName }) => {
+const UserCard = () => {
   return (
-    <div className="flex items-center ">
-      <img className="w-10 h-10 rounded-full" src="" alt="" />
-      <div>
-        <h1>{name}</h1>
-        <p>{position}</p>
-      </div>
+    <div className="flex items-center gap-4 p-5 ">
     </div>
   );
 };
 
-export default userCard;
+export default UserCard;
