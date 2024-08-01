@@ -154,8 +154,6 @@ export default function Home() {
           >
             view
           </button>
-
-          {/* <button onClick={removeCard}></button> */}
         </div>
 
         {/* <p> Search value: {searchValue}</p> */}

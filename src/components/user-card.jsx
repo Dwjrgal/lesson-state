@@ -1,7 +1,7 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
-const UserCard = ({ userImg, firstName, CloseIcon, userId }) => {
+const UserCard = ({ userImg, firstName, CloseIcon, userId, removeCard }) => {
   return (
     <div className="flex items-center p-5 border rounded justify-between">
       <div className="flex items-center gap-5">
