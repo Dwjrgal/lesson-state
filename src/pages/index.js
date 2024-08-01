@@ -131,10 +131,11 @@ export default function Home() {
     setUsers(profiles);
   };
 
-  const removeCard = (userIndex) =>{
-    const card = profiles.splice(userIndex,1)
-    setUsers(card=[])
-  }
+  const removeCard = (userId) => {
+    const deleteCard = users.filter((user) => user.id !== userId);
+    setUsers(deleteCard);
+  };
+
   return (
     <main className="flex flex-col items-center py-8">
       <h1 className="text-3xl text-gray-950 "> user find application</h1>
@@ -153,7 +154,8 @@ export default function Home() {
           >
             view
           </button>
-          <button onClick={removeCard}>{CloseIcon}</button>
+
+          {/* <button onClick={removeCard}></button> */}
         </div>
 
         {/* <p> Search value: {searchValue}</p> */}
@@ -163,6 +165,8 @@ export default function Home() {
               userImg={user.imageUrl}
               firstName={user.firstName}
               CloseIcon={user.icon}
+              userId={user.id}
+              removeCard={removeCard}
             />
           );
         })}
